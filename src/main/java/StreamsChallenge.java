@@ -41,7 +41,12 @@ class StreamsChallenge extends StreamsTutorial {
     }
 
     @Override
-    void giveEveryoneAThousandPoundPayrise() {
+    void giveEveryoneAThousandPoundPayRise() {
+    }
+
+    @Override
+    List<String> returnListOfPeopleFromPartialPersonListWithUnknownReplacedByDave() {
+        return List.of();
     }
 
     @Override

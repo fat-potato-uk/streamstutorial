@@ -1,6 +1,7 @@
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.regex.Pattern;
 
 import static java.util.stream.Collectors.toList;
@@ -64,8 +65,16 @@ class StreamsChallengeAnswers extends StreamsTutorial {
     }
 
     @Override
-    void giveEveryoneAThousandPoundPayrise() {
+    void giveEveryoneAThousandPoundPayRise() {
         this.getPersonList().forEach(person -> person.setSalary(person.getSalary() + 1000));
+    }
+
+    @Override
+    List<String> returnListOfPeopleFromPartialPersonListWithUnknownReplacedByDave() {
+        return this.getPartialPersonList()
+                .stream()
+                .map(person -> Optional.ofNullable(person.getName()).orElse("Dave"))
+                .collect(toList());
     }
 
     @Override
