@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StreamsTutorialTest {
 
+    // Change StreamsChallenge to StreamsChallengeAnswers to see proof this works :)
     private StreamsTutorial streamsTutorial = new StreamsChallenge();
 
     @Test
